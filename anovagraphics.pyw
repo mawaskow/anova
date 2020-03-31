@@ -153,6 +153,11 @@ def anovadisp(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,w,x,y):
     outfile.close()
     line3=Text(Point(x/2,200),"ANOVA Program Output").draw(w)
     line3.setSize(16), line3.setTextColor('Dark Blue')
+    rw, rh = x/2, 60
+    x1 = x/2 - rw/2
+    y1 = y/1.2 - rh/2
+    x2, y2 = x/2 + rw/2, y/1.2 + rh/2
+    r1 = Rectangle(Point(x1, y1), Point(x2,y2)).draw(w)
     line4=Text(Point(x/2,200+30),(a + (" "*5) + b + (" "*5) + c + (" "*5) + d + (" "*5) + e + (" "*5))).draw(w)
     line5=Text(Point(x/2,200+60),("-" * 110)).draw(w)
     line6=Text(Point(x/2,200+90),(str(f) + (" "*10) + str(g) + (" "*30) + str(h) + (" "*30) + str(i) + (" "*13) + str(j) + (" "*22))).draw(w)
